@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": "packages/web-static"
+    },
+    {
+      "path": "packages/web-components"
+    },
+    {
+      "path": "."
+    }
+  ],
+  "settings": {}
+}

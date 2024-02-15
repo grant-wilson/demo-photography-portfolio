@@ -1,0 +1,12 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Gallery, Cta, ContactInformation } from "@gwdev/web-components";
+
+const projects = Array.from({ length: 20 }).map((_, i) => `${i + 1}`);
+---
+
+<Layout title="Portfolio > Home">
+  <Gallery client:load projects={projects} />
+  <Cta client:load />
+  <ContactInformation client:load />
+</Layout>

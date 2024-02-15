@@ -1,0 +1,12 @@
+{
+  "name": "templates-web",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {},
+  "author": "",
+  "workspaces": [
+    "packages/web-components",
+    "packages/web-static",
+    "consumer"
+  ]
+}

@@ -1,0 +1,70 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+import { Nav } from "@gwdev/web-components";
+import { Footer } from "@gwdev/web-components";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="/light.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="
+    /dark.css" />
+    <style>
+      html,
+      body {
+        padding: 0;
+      }
+      body {
+        background: var(--md-sys-color-background);
+        color: var(--md-sys-color-on-background);
+        font-family: Roboto, sans-serif;
+        /* grid column layout */
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        transition: background 0.3s ease-in-out;
+      }
+      body {
+        margin: 0 auto;
+        max-width: 1440px;
+      }
+      :root {
+        --md-sys-typescale-label-large-font: Roboto, sans-serif;
+      }
+    </style>
+    <title>{title}</title>
+    <script>
+      let theme = localStorage.getItem("theme");
+      if (theme == null) {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light";
+        console.log("theme", theme);
+      }
+      document.body.classList.add(theme);
+    </script>
+  </head>
+  <body>
+    <Nav client:only />
+    <slot />
+    <Footer />
+  </body>
+</html>

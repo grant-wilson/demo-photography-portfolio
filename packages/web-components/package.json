@@ -1,0 +1,75 @@
+{
+  "name": "@gwdev/web-components",
+  "private": true,
+  "version": "0.0.1",
+  "module": "dist/my-element.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "src",
+    "package.json"
+  ],
+  "type": "module",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "wireit",
+    "build:css-to-ts": "wireit",
+    "build:sass": "wireit"
+  },
+  "wireit": {
+    "build": {
+      "dependencies": [
+        "build:ts"
+      ]
+    },
+    "build:ts": {
+      "command": "tsc --pretty",
+      "files": [
+        "tsconfig.json",
+        "src/**/*.ts"
+      ],
+      "output": [
+        "dist"
+      ],
+      "clean": "if-file-deleted",
+      "dependencies": [
+        "build:css-to-ts"
+      ]
+    },
+    "build:css-to-ts": {
+      "command": "node css-to-ts.js",
+      "files": [
+        "css-to-ts.js"
+      ],
+      "output": [
+        "src/**/*.css.ts"
+      ],
+      "dependencies": [
+        "build:sass"
+      ]
+    },
+    "build:sass": {
+      "command": "sass --style=compressed src",
+      "files": [
+        "src/**/*.scss"
+      ],
+      "output": [
+        "src/**/*.css",
+        "src/**/*.css.map"
+      ]
+    }
+  },
+  "dependencies": {
+    "@material/web": "^1.2.0",
+    "lit": "^3.1.2",
+    "tslib": "^2.6.2"
+  },
+  "devDependencies": {
+    "sass": "^1.70.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.0",
+    "wireit": "^0.14.4"
+  }
+}

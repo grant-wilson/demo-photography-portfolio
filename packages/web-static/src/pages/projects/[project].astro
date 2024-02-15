@@ -1,0 +1,22 @@
+---
+import type { GetStaticPaths } from "astro";
+import Layout from "../../layouts/Layout.astro";
+import { Gallery, Project, ContactInformation } from "@gwdev/web-components";
+import { readdirSync } from "fs";
+
+export const getStaticPaths = (() => {
+  const images = readdirSync("public/images");
+  return images.map((image) => ({
+    params: { project: image.replace(".png", "") },
+  }));
+}) satisfies GetStaticPaths;
+
+const { project } = Astro.params;
+const projects = ["1", "2", "3", "4", "5", "6", "7", "8"];
+---
+
+<Layout title="Portfolio > Contact">
+  <Project client:load projectId={project} />
+  <Gallery client:load projects={projects} />
+  <ContactInformation client:load />
+</Layout>

@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "allowUnreachableCode": false,
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationMap": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": true,
+    "paths": {},
+    "sourceMap": true,
+    "inlineSources": true,
+    "rootDir": "src",
+    "strict": true,
+    "strictNullChecks": false,
+    "target": "es2020",
+    "types": ["lit"],
+    "outDir": "dist"
+  },
+  "exclude": ["catalog", "**/demo", "scripts/", "dist"]
+}

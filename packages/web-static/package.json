@@ -1,0 +1,54 @@
+{
+  "name": "web-static",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "wireit",
+    "build": "wireit",
+    "astro": "wireit"
+  },
+  "wireit": {
+    "start": {
+      "command": "astro dev",
+      "service": true,
+      "files": [
+        "astro.config.mjs"
+      ],
+      "dependencies": [
+        "../web-components:build"
+      ]
+    },
+    "build": {
+      "command": "astro build",
+      "files": [
+        "astro.config.mjs",
+        "src/**/*",
+        "public/**/*"
+      ],
+      "output": [
+        "dist"
+      ],
+      "dependencies": [
+        "check",
+        "../web-components:build"
+      ]
+    },
+    "check": {
+      "command": "astro check",
+      "files": [
+        "src/**/*.{astro,js,ts}"
+      ]
+    }
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.2",
+    "@astrojs/lit": "^4.0.1",
+    "@gwdev/web-components": "^0.0.1",
+    "astro": "^4.3.5",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "web-components": "^0.0.1",
+    "wireit": "^0.14.4"
+  }
+}
