@@ -11,8 +11,8 @@ export class Cta extends LitElement {
       <p class="content">
         Contact us today to discuss your project and collaborate with our team.
       </p>
-      <md-filled-button>Contact</md-filled-button>
-      <site-img></site-img>
+      <md-filled-button href="/contact">Contact</md-filled-button>
+      <site-img src="/create.jpg"></site-img>
     `;
   }
 
@@ -30,7 +30,7 @@ export class Cta extends LitElement {
         grid: "header img" auto "content img" auto "button img" auto ". img" 1fr / 1fr 1fr;
         grid-auto-rows: min-content;
         grid-template-columns: 1fr 1fr;
-        column-gap: 80px;
+        column-gap: 1rem;
       }
     }
     header {
@@ -65,6 +65,7 @@ export class Cta extends LitElement {
     }
     site-img {
       grid-area: img;
+      height: 4in;
     }
   `;
 }

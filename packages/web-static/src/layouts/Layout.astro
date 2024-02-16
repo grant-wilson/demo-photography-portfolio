@@ -4,8 +4,6 @@ interface Props {
 }
 
 const { title } = Astro.props;
-import { Nav } from "@gwdev/web-components";
-import { Footer } from "@gwdev/web-components";
 ---
 
 <!doctype html>
@@ -45,13 +43,10 @@ import { Footer } from "@gwdev/web-components";
         transition: background 0.3s ease-in-out;
       }
       body {
-        margin: 0 1rem;
-        max-width: 1250px;
-      }
-      @media screen and (min-width: 1250px) {
-        body {
-          margin: 0 auto;
-        }
+        margin: 0 auto;
+        padding-left: 32px;
+        padding-right: 32px;
+        max-width: 1280px;
       }
       :root {
         --md-sys-typescale-label-large-font: Roboto, sans-serif;
@@ -74,10 +69,13 @@ import { Footer } from "@gwdev/web-components";
         document.body.classList.add("anim");
       });
     </script>
+    <script>
+      import "@gwdev/web-components";
+    </script>
   </head>
   <body>
-    <Nav client:only />
+    <site-nav></site-nav>
     <slot />
-    <Footer />
+    <site-footer></site-footer>
   </body>
 </html>

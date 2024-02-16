@@ -17,7 +17,7 @@ export class ContactForm extends LitElement {
             style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex"
           >
             <div
-              style="text-align: center; color: black; font-size: 16px; font-weight: 600; line-height: 24px; word-wrap: break-word"
+              style="text-align: center; font-size: 16px; font-weight: 600; line-height: 24px; word-wrap: break-word"
             >
               Get in touch
             </div>
@@ -25,7 +25,7 @@ export class ContactForm extends LitElement {
               style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex"
             >
               <div
-                style="align-self: stretch; color: black; font-size: 48px; font-weight: 700; line-height: 57.60px; word-wrap: break-word"
+                style="align-self: stretch; font-size: 48px; font-weight: 700; line-height: 57.60px; word-wrap: break-word"
               >
                 Contact me
               </div>
@@ -47,12 +47,12 @@ export class ContactForm extends LitElement {
                 >
                   <path
                     d="M20 4H4C2.897 4 2 4.897 2 6V18C2 19.103 2.897 20 4 20H20C21.103 20 22 19.103 22 18V6C22 4.897 21.103 4 20 4ZM20 6V6.511L12 12.734L4 6.512V6H20ZM4 18V9.044L11.386 14.789C11.5611 14.9265 11.7773 15.0013 12 15.0013C12.2227 15.0013 12.4389 14.9265 12.614 14.789L20 9.044L20.002 18H4Z"
-                    fill="black"
+                    fill="currentcolor"
                   />
                 </svg>
               </div>
               <div
-                style="color: black; font-size: 16px; font-weight: 400; line-height: 24px; word-wrap: break-word"
+                style="font-size: 16px; font-weight: 400; line-height: 24px; word-wrap: break-word"
               >
                 example@example.com
               </div>
@@ -70,12 +70,12 @@ export class ContactForm extends LitElement {
                 >
                   <path
                     d="M17.7071 12.293C17.6143 12.2 17.5041 12.1263 17.3828 12.076C17.2615 12.0257 17.1314 11.9998 17.0001 11.9998C16.8688 11.9998 16.7387 12.0257 16.6174 12.076C16.4961 12.1263 16.3859 12.2 16.2931 12.293L14.6991 13.887C13.9601 13.667 12.5811 13.167 11.7071 12.293C10.8331 11.419 10.3331 10.04 10.1131 9.30096L11.7071 7.70696C11.8 7.61417 11.8738 7.50397 11.9241 7.38265C11.9744 7.26134 12.0003 7.13129 12.0003 6.99996C12.0003 6.86862 11.9744 6.73858 11.9241 6.61726C11.8738 6.49595 11.8 6.38575 11.7071 6.29296L7.70709 2.29296C7.6143 2.20001 7.5041 2.12627 7.38278 2.07596C7.26147 2.02565 7.13142 1.99976 7.00009 1.99976C6.86876 1.99976 6.73871 2.02565 6.6174 2.07596C6.49608 2.12627 6.38588 2.20001 6.29309 2.29296L3.58109 5.00496C3.20109 5.38496 2.98709 5.90696 2.99509 6.43996C3.01809 7.86396 3.39509 12.81 7.29309 16.708C11.1911 20.606 16.1371 20.982 17.5621 21.006H17.5901C18.1181 21.006 18.6171 20.798 18.9951 20.42L21.7071 17.708C21.8 17.6152 21.8738 17.505 21.9241 17.3837C21.9744 17.2623 22.0003 17.1323 22.0003 17.001C22.0003 16.8696 21.9744 16.7396 21.9241 16.6183C21.8738 16.4969 21.8 16.3867 21.7071 16.294L17.7071 12.293ZM17.5801 19.005C16.3321 18.984 12.0621 18.649 8.70709 15.293C5.34109 11.927 5.01509 7.64196 4.99509 6.41896L7.00009 4.41396L9.58609 6.99996L8.29309 8.29296C8.17555 8.41041 8.08913 8.55529 8.04164 8.71453C7.99415 8.87376 7.98709 9.04231 8.02109 9.20496C8.04509 9.31996 8.63209 12.047 10.2921 13.707C11.9521 15.367 14.6791 15.954 14.7941 15.978C14.9566 16.0129 15.1254 16.0064 15.2847 15.9591C15.4441 15.9117 15.589 15.825 15.7061 15.707L17.0001 14.414L19.5861 17L17.5801 19.005Z"
-                    fill="black"
+                    fill="currentcolor"
                   />
                 </svg>
               </div>
               <div
-                style="color: black; font-size: 16px; font-weight: 400; line-height: 24px; word-wrap: break-word"
+                style="font-size: 16px; font-weight: 400; line-height: 24px; word-wrap: break-word"
               >
                 +1 (555) 000-0000
               </div>
@@ -93,18 +93,18 @@ export class ContactForm extends LitElement {
                 >
                   <path
                     d="M12.0001 14C14.2061 14 16.0001 12.206 16.0001 10C16.0001 7.794 14.2061 6 12.0001 6C9.79406 6 8.00006 7.794 8.00006 10C8.00006 12.206 9.79406 14 12.0001 14ZM12.0001 8C13.1031 8 14.0001 8.897 14.0001 10C14.0001 11.103 13.1031 12 12.0001 12C10.8971 12 10.0001 11.103 10.0001 10C10.0001 8.897 10.8971 8 12.0001 8ZM11.4201 21.814C11.5893 21.9349 11.7921 21.9998 12.0001 21.9998C12.2081 21.9998 12.4108 21.9349 12.5801 21.814C12.8841 21.599 20.0291 16.44 20.0001 10C20.0001 5.589 16.4111 2 12.0001 2C7.58909 2 4.00009 5.589 4.00009 9.995C3.97109 16.44 11.1161 21.599 11.4201 21.814ZM12.0001 4C15.3091 4 18.0001 6.691 18.0001 10.005C18.0211 14.443 13.6121 18.428 12.0001 19.735C10.3891 18.427 5.97909 14.441 6.00009 10C6.00009 6.691 8.69109 4 12.0001 4Z"
-                    fill="black"
+                    fill="currentcolor"
                   />
                   <path
                     d="M12.0001 14C14.2061 14 16.0001 12.206 16.0001 10C16.0001 7.794 14.2061 6 12.0001 6C9.79406 6 8.00006 7.794 8.00006 10C8.00006 12.206 9.79406 14 12.0001 14ZM12.0001 8C13.1031 8 14.0001 8.897 14.0001 10C14.0001 11.103 13.1031 12 12.0001 12C10.8971 12 10.0001 11.103 10.0001 10C10.0001 8.897 10.8971 8 12.0001 8ZM11.4201 21.814C11.5893 21.9349 11.7921 21.9998 12.0001 21.9998C12.2081 21.9998 12.4108 21.9349 12.5801 21.814C12.8841 21.599 20.0291 16.44 20.0001 10C20.0001 5.589 16.4111 2 12.0001 2C7.58909 2 4.00009 5.589 4.00009 9.995C3.97109 16.44 11.1161 21.599 11.4201 21.814ZM12.0001 4C15.3091 4 18.0001 6.691 18.0001 10.005C18.0211 14.443 13.6121 18.428 12.0001 19.735C10.3891 18.427 5.97909 14.441 6.00009 10C6.00009 6.691 8.69109 4 12.0001 4Z"
-                    fill="black"
+                    fill="currentcolor"
                   />
                 </svg>
               </div>
               <div
-                style="color: black; font-size: 16px; font-weight: 400; line-height: 24px; word-wrap: break-word"
+                style="font-size: 16px; font-weight: 400; line-height: 24px; word-wrap: break-word"
               >
-                1407 Graymalkin Lane, Salem Center
+                6th St. & Independence Ave., SW Washington, DC
               </div>
             </div>
           </div>
@@ -139,7 +139,7 @@ export class ContactForm extends LitElement {
             ></md-filled-text-field>
           </div>
           <div
-            style="width: 99px; height: 48px; background: #006A61; border-radius: 100px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: flex"
+            style="width: 99px; height: 48px;  flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: flex"
           >
             <div
               style="align-self: stretch; flex: 1 1 0; padding-left: 24px; padding-right: 24px; padding-top: 10px; padding-bottom: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex"
@@ -157,7 +157,7 @@ export class ContactForm extends LitElement {
     :host {
       display: flex;
       flex-direction: column;
-      margin: 122px 64px;
+      margin: 122px 0;
     }
   `;
 }

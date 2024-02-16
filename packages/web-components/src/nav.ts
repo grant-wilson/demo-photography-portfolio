@@ -63,9 +63,11 @@ export class Nav extends LitElement {
       font-weight: 400;
       line-height: 150%; /* 24px */
     }
-
     a:hover {
       text-decoration: underline;
+    }
+    md-text-button {
+      --_label-text-color: var(--md-sys-color-on-background);
     }
   `;
 }

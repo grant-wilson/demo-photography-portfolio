@@ -6,6 +6,9 @@ export class Project extends LitElement {
   @property({ type: String })
   projectId: string;
 
+  @property({ type: String })
+  projectPath: string;
+
   protected override render() {
     if (this.projectId == null) {
       return html``;
@@ -37,14 +40,14 @@ export class Project extends LitElement {
       </div>
       <div
         class="project-image"
-        style="background-image: url('/images/${this.projectId}.png')"
+        style="background-image: url('${this.projectPath}')"
       ></div>
     `;
   }
 
   static override styles = css`
     :host {
-      padding: 112px 64px;
+      padding: 112px 0;
       display: grid;
       grid-template-columns: 1fr 1fr;
       min-height: 75lvh;

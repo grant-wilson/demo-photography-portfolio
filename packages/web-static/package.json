@@ -29,7 +29,6 @@
         "dist"
       ],
       "dependencies": [
-        "check",
         "../web-components:build"
       ]
     },

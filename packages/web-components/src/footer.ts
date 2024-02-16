@@ -19,16 +19,18 @@ export class Footer extends LitElement {
           <div
             style="justify-content: center; align-items: flex-start; gap: 32px; display: inline-flex"
           >
-            <div
+            <a
               style=" font-size: 16px;  font-weight: 600; line-height: 24px; word-wrap: break-word"
+              href="/contact"
             >
               Contact Us
-            </div>
-            <div
+            </a>
+            <a
               style=" font-size: 16px;  font-weight: 600; line-height: 24px; word-wrap: break-word"
+              href="/"
             >
               Portfolio
-            </div>
+            </a>
           </div>
         </div>
         <div
@@ -45,15 +47,6 @@ export class Footer extends LitElement {
             >
               © 2023 Example. All rights reserved.
             </div>
-            <div
-              style="justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex"
-            >
-              <div
-                style=" font-size: 14px;  font-weight: 400; text-decoration: underline; line-height: 21px; word-wrap: break-word"
-              >
-                Cookie Policy
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -63,6 +56,9 @@ export class Footer extends LitElement {
   static override styles = css`
     :host {
       margin: 80px 0;
+    }
+    a {
+      color: var(--md-sys-color-on-background);
     }
   `;
 }
