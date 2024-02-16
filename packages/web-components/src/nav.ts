@@ -27,13 +27,13 @@ export class Nav extends LitElement {
     return html`
       <site-logo></site-logo>
       <span style="flex-grow: 1;"></span>
-      <md-icon-button @click=${() => this.setTheme()}
+      <md-icon-button @click=${() => this.setTheme()} aria-label="Toggle theme"
         ><md-icon
           >${this.theme == "light" ? "dark_mode" : "light_mode"}</md-icon
         ></md-icon-button
       >
-      <md-text-button href="/">Portfolio</md-text-button>
-      <md-text-button href="/contact">Contact</md-text-button>
+      <md-text-button href=".">Portfolio</md-text-button>
+      <md-text-button href="contact">Contact</md-text-button>
     `;
   }
 

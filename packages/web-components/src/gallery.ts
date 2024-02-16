@@ -49,9 +49,10 @@ export class Gallery extends LitElement {
             ${projects.map(
               (project, i) => html`
                 <a
-                  href="/projects/${project.name}"
+                  href="projects/${project.name}"
                   class="project-card"
                   style="height: ${(i % 3) + 2}in;"
+                  aria-label="${project.name}"
                 >
                   <div
                     class="project-image"

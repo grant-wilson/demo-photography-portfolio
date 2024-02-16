@@ -10,7 +10,7 @@ const projects = readdirSync("public/images", {
   .map((dirent) => {
     const fullPath = url.parse(path.join(dirent.path, dirent.name), true);
     return {
-      path: fullPath.pathname?.replace(/^public\//, "/"),
+      path: fullPath.pathname?.replace(/^public\//, ""),
       name: dirent.name.replace(/\.(png|jpg|jpeg|gif|svg)$/, ""),
     };
   });

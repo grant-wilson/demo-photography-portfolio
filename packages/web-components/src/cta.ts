@@ -11,8 +11,8 @@ export class Cta extends LitElement {
       <p class="content">
         Contact us today to discuss your project and collaborate with our team.
       </p>
-      <md-filled-button href="/contact">Contact</md-filled-button>
-      <site-img src="/create.jpg"></site-img>
+      <md-filled-button href="contact">Contact</md-filled-button>
+      <site-img src="create.jpg"></site-img>
     `;
   }
 

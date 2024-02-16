@@ -21,13 +21,13 @@ export class Footer extends LitElement {
           >
             <a
               style=" font-size: 16px;  font-weight: 600; line-height: 24px; word-wrap: break-word"
-              href="/contact"
+              href="contact"
             >
               Contact Us
             </a>
             <a
               style=" font-size: 16px;  font-weight: 600; line-height: 24px; word-wrap: break-word"
-              href="/"
+              href="."
             >
               Portfolio
             </a>

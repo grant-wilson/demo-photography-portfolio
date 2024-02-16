@@ -5,7 +5,8 @@
   "scripts": {
     "start": "wireit",
     "build": "wireit",
-    "astro": "wireit"
+    "astro": "wireit",
+    "deploy": "wireit"
   },
   "wireit": {
     "start": {
@@ -16,6 +17,15 @@
       ],
       "dependencies": [
         "../web-components:build"
+      ]
+    },
+    "deploy": {
+      "command": "gh-pages -d dist --nojekyll",
+      "files": [
+        "dist/**/*"
+      ],
+      "dependencies": [
+        "build"
       ]
     },
     "build": {
@@ -47,6 +57,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "web-components": "^0.0.1",
     "wireit": "^0.14.4"
   }

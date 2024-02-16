@@ -133,6 +133,7 @@ export class ContactInformation extends LitElement {
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
+        title="Google Maps"
       ></iframe>
     `;
   }
