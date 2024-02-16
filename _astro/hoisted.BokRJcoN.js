@@ -177,8 +177,8 @@ function s(i,e,t,r){var o=arguments.length,a=o<3?e:r===null?r=Object.getOwnPrope
       <p class="content">
         Contact us today to discuss your project and collaborate with our team.
       </p>
-      <md-filled-button href="/contact">Contact</md-filled-button>
-      <site-img src="/create.jpg"></site-img>
+      <md-filled-button href="contact">Contact</md-filled-button>
+      <site-img src="create.jpg"></site-img>
     `}};De.styles=g`
     :host {
       display: grid;
@@ -395,7 +395,7 @@ function s(i,e,t,r){var o=arguments.length,a=o<3?e:r===null?r=Object.getOwnPrope
         ${e.map(t=>p`
             ${t.map((r,o)=>p`
                 <a
-                  href="/projects/${r.name}"
+                  href="projects/${r.name}"
                   class="project-card"
                   style="height: ${o%3+2}in;"
                 >
@@ -586,8 +586,8 @@ function s(i,e,t,r){var o=arguments.length,a=o<3?e:r===null?r=Object.getOwnPrope
           >${this.theme=="light"?"dark_mode":"light_mode"}</md-icon
         ></md-icon-button
       >
-      <md-text-button href="/">Portfolio</md-text-button>
-      <md-text-button href="/contact">Contact</md-text-button>
+      <md-text-button href="">Portfolio</md-text-button>
+      <md-text-button href="contact">Contact</md-text-button>
     `}};ve.styles=g`
     :host {
       display: flex;
@@ -804,13 +804,13 @@ function s(i,e,t,r){var o=arguments.length,a=o<3?e:r===null?r=Object.getOwnPrope
           >
             <a
               style=" font-size: 16px;  font-weight: 600; line-height: 24px; word-wrap: break-word"
-              href="/contact"
+              href="contact"
             >
               Contact Us
             </a>
             <a
               style=" font-size: 16px;  font-weight: 600; line-height: 24px; word-wrap: break-word"
-              href="/"
+              href=""
             >
               Portfolio
             </a>
