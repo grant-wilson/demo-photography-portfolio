@@ -586,7 +586,7 @@ function s(i,e,t,r){var o=arguments.length,a=o<3?e:r===null?r=Object.getOwnPrope
           >${this.theme=="light"?"dark_mode":"light_mode"}</md-icon
         ></md-icon-button
       >
-      <md-text-button href="">Portfolio</md-text-button>
+      <md-text-button href=".">Portfolio</md-text-button>
       <md-text-button href="contact">Contact</md-text-button>
     `}};ve.styles=g`
     :host {
@@ -810,7 +810,7 @@ function s(i,e,t,r){var o=arguments.length,a=o<3?e:r===null?r=Object.getOwnPrope
             </a>
             <a
               style=" font-size: 16px;  font-weight: 600; line-height: 24px; word-wrap: break-word"
-              href=""
+              href="."
             >
               Portfolio
             </a>
