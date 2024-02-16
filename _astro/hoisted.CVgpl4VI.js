@@ -398,6 +398,7 @@ function s(i,e,t,r){var o=arguments.length,a=o<3?e:r===null?r=Object.getOwnPrope
                   href="projects/${r.name}"
                   class="project-card"
                   style="height: ${o%3+2}in;"
+                  aria-label="${r.name}"
                 >
                   <div
                     class="project-image"
@@ -581,7 +582,7 @@ function s(i,e,t,r){var o=arguments.length,a=o<3?e:r===null?r=Object.getOwnPrope
  */let Me=class extends ai{};Me.styles=[li];Me=s([y("md-icon")],Me);let ve=class extends m{constructor(){super(...arguments),this.theme=document.body.classList.contains("dark")?"dark":"light"}setTheme(){this.theme=document.body.classList.contains("dark")?"light":"dark",this.theme=="dark"?(document.body.classList.add("dark"),document.body.classList.remove("light")):(document.body.classList.add("light"),document.body.classList.remove("dark")),localStorage.setItem("theme",this.theme)}render(){return p`
       <site-logo></site-logo>
       <span style="flex-grow: 1;"></span>
-      <md-icon-button @click=${()=>this.setTheme()}
+      <md-icon-button @click=${()=>this.setTheme()} aria-label="Toggle theme"
         ><md-icon
           >${this.theme=="light"?"dark_mode":"light_mode"}</md-icon
         ></md-icon-button
@@ -749,6 +750,7 @@ function s(i,e,t,r){var o=arguments.length,a=o<3?e:r===null?r=Object.getOwnPrope
         allowfullscreen=""
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
+        title="Google Maps"
       ></iframe>
     `}};ze.styles=g`
     :host {
