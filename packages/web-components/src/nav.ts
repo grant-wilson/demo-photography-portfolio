@@ -14,7 +14,9 @@ export class Nav extends LitElement {
 
     if (this.theme == "dark") {
       document.body.classList.add("dark");
+      document.body.classList.remove("light");
     } else {
+      document.body.classList.add("light");
       document.body.classList.remove("dark");
     }
 
@@ -39,10 +41,19 @@ export class Nav extends LitElement {
     :host {
       display: flex;
       height: 72px;
-      padding: 8px 64px;
       align-items: center;
       flex-direction: row;
-      gap: 32px;
+      gap: 8px;
+    }
+    @media screen and (min-width: 481px) {
+      :host {
+        gap: 16px;
+      }
+    }
+    @media screen and (min-width: 769px) {
+      :host {
+        gap: 32px;
+      }
     }
     a {
       text-decoration: none;

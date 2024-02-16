@@ -7,14 +7,11 @@ import "@material/web/button/filled-button";
 export class Cta extends LitElement {
   protected override render() {
     return html`
-      <div class="content">
-        <header>Let's Create Something Amazing Together</header>
-        <p>
-          Contact us today to discuss your project and collaborate with our
-          team.
-        </p>
-        <md-filled-button>Contact</md-filled-button>
-      </div>
+      <header>Let's Create Something Amazing Together</header>
+      <p class="content">
+        Contact us today to discuss your project and collaborate with our team.
+      </p>
+      <md-filled-button>Contact</md-filled-button>
       <site-img></site-img>
     `;
   }
@@ -22,22 +19,52 @@ export class Cta extends LitElement {
   static override styles = css`
     :host {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
       overflow: hidden;
-      margin: 112px 64px;
+      grid: "header" "img" "content" "button";
+      grid-auto-rows: min-content;
+      grid-template-rows: auto;
+      margin: 112px 8px;
+    }
+    @media screen and (min-width: 768px) {
+      :host {
+        grid: "header img" auto "content img" auto "button img" auto ". img" 1fr / 1fr 1fr;
+        grid-auto-rows: min-content;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 80px;
+      }
+    }
+    header {
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 120%; /* 57.6px */
+      grid-area: header;
+      text-align: center;
+    }
+    @media screen and (min-width: 768px) {
+      header {
+        font-size: 3rem;
+        text-align: start;
+      }
     }
     .content {
       display: flex;
       flex-direction: column;
       gap: 24px;
       align-items: flex-start;
+      grid-area: content;
     }
-    header {
-      font-size: 48px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 120%; /* 57.6px */
+    md-filled-button {
+      grid-area: button;
+    }
+    @media screen and (min-width: 768px) {
+      md-filled-button {
+        justify-self: start;
+        width: min-content;
+      }
+    }
+    site-img {
+      grid-area: img;
     }
   `;
 }

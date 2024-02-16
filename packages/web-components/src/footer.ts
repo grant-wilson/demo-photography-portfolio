@@ -20,12 +20,12 @@ export class Footer extends LitElement {
             style="justify-content: center; align-items: flex-start; gap: 32px; display: inline-flex"
           >
             <div
-              style="color: black; font-size: 16px;  font-weight: 600; line-height: 24px; word-wrap: break-word"
+              style=" font-size: 16px;  font-weight: 600; line-height: 24px; word-wrap: break-word"
             >
               Contact Us
             </div>
             <div
-              style="color: black; font-size: 16px;  font-weight: 600; line-height: 24px; word-wrap: break-word"
+              style=" font-size: 16px;  font-weight: 600; line-height: 24px; word-wrap: break-word"
             >
               Portfolio
             </div>
@@ -35,13 +35,13 @@ export class Footer extends LitElement {
           style="align-self: stretch; height: 54px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 32px; display: flex"
         >
           <div
-            style="align-self: stretch; height: 1px; background: black; border: 1px black solid"
+            style="align-self: stretch; height: 1px; background: var(--md-sys-color-on-background); border: 1px var(--md-sys-color-on-background) solid"
           ></div>
           <div
             style="align-self: stretch; justify-content: space-between; align-items: flex-start; display: inline-flex"
           >
             <div
-              style="color: black; font-size: 14px;  font-weight: 400; line-height: 21px; word-wrap: break-word"
+              style=" font-size: 14px;  font-weight: 400; line-height: 21px; word-wrap: break-word"
             >
               © 2023 Example. All rights reserved.
             </div>
@@ -49,7 +49,7 @@ export class Footer extends LitElement {
               style="justify-content: flex-start; align-items: flex-start; gap: 24px; display: flex"
             >
               <div
-                style="color: black; font-size: 14px;  font-weight: 400; text-decoration: underline; line-height: 21px; word-wrap: break-word"
+                style=" font-size: 14px;  font-weight: 400; text-decoration: underline; line-height: 21px; word-wrap: break-word"
               >
                 Cookie Policy
               </div>
@@ -62,7 +62,7 @@ export class Footer extends LitElement {
 
   static override styles = css`
     :host {
-      margin: 80px 64px;
+      margin: 80px 0;
     }
   `;
 }

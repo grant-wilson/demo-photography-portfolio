@@ -40,14 +40,24 @@ import { Footer } from "@gwdev/web-components";
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;
+      }
+      body.anim {
         transition: background 0.3s ease-in-out;
       }
       body {
-        margin: 0 auto;
-        max-width: 1440px;
+        margin: 0 1rem;
+        max-width: 1250px;
+      }
+      @media screen and (min-width: 1250px) {
+        body {
+          margin: 0 auto;
+        }
       }
       :root {
         --md-sys-typescale-label-large-font: Roboto, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
       }
     </style>
     <title>{title}</title>
@@ -57,9 +67,12 @@ import { Footer } from "@gwdev/web-components";
         theme = window.matchMedia("(prefers-color-scheme: dark)").matches
           ? "dark"
           : "light";
-        console.log("theme", theme);
       }
       document.body.classList.add(theme);
+      // add anim class to body once document has rendered
+      addEventListener("load", () => {
+        document.body.classList.add("anim");
+      });
     </script>
   </head>
   <body>

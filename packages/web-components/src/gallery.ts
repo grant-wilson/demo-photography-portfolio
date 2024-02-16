@@ -28,6 +28,27 @@ export class Gallery extends LitElement {
       projectGroups.push(this.projects.slice(i, i + 4));
     }
 
+    // ${projectGroups.map(
+    //   (projects, i) => html`
+    //     <div class="container container-${(i % 2) + 1}">
+    //       ${projects.map(
+    //         (project) => html`
+    //           <a href="/projects/${project}" class="project-link">
+    //             <md-focus-ring
+    //               style="--md-focus-ring-shape: 8px"
+    //             ></md-focus-ring>
+    //             <md-elevation></md-elevation>
+    //             <div
+    //               class="project-image"
+    //               style="background-image: url('/images/${project}.png');"
+    //             ></div>
+    //           </a>
+    //         `
+    //       )}
+    //     </div>
+    //   `
+    // )}
+
     return html`
       <header>Portfolio Gallery</header>
       <ul>
@@ -35,46 +56,27 @@ export class Gallery extends LitElement {
         <li><md-filter-chip label="Painting"></md-filter-chip></li>
         <li><md-filter-chip label="Sculpture"></md-filter-chip></li>
       </ul>
-      ${projectGroups.map(
-        (projects, i) => html`
-          <div class="container container-${(i % 2) + 1}">
-            ${projects.map(
-              (project) => html`
-                <a href="/projects/${project}" class="project-link">
-                  <md-focus-ring
-                    style="--md-focus-ring-shape: 8px"
-                  ></md-focus-ring>
-                  <md-elevation></md-elevation>
-                  <div
-                    class="project-image"
-                    style="background-image: url('/images/${project}.png');"
-                  ></div>
-                </a>
-              `
-            )}
-          </div>
-        `
-      )}
+
       <md-outlined-button @click=${() => this.loadMore()}
         >Load More</md-outlined-button
       >
     `;
   }
 
-  // <!-- <img src="/images/${projects[0]}.png" alt="Project Image" />
-  // <img src="/images/${projects[1]}.png" alt="Project Image" />
-  // <img src="/images/${projects[2]}.png" alt="Project Image" />
-  // <img src="/images/${projects[3]}.png" alt="Project Image" /> -->
-
   static override styles = css`
     :host {
       display: flex;
       flex-direction: column;
-      padding: 112px 64px;
+      margin-top: 32px;
       align-items: center;
-      gap: 32px;
+      gap: 16px;
       color: var(--md-sys-color-on-background);
     }
+
+    * {
+      box-sizing: border-box;
+    }
+
     header {
       text-align: center;
       font-size: 48px;
@@ -93,35 +95,44 @@ export class Gallery extends LitElement {
     }
     .container {
       align-self: stretch;
-      height: 800px;
-      display: flex;
-      flex-direction: column;
-      flex-wrap: wrap;
-      gap: 32px;
+      column-count: 1;
+      --container-gap: 4px;
+    }
+    @media screen and (min-width: 481px) {
+      .container {
+        --container-gap: 8px;
+        column-count: 2;
+        height: 800px;
+      }
+    }
+    @media screen and (min-width: 769px) {
+      .container {
+        --container-gap: 16px;
+      }
     }
     .container-1 > .project-link:nth-child(1) {
-      height: calc((1000px - 32px) / 4 * 2);
+      height: calc((1000px - var(--container-gap)) / 4 * 2);
     }
     .container-1 > .project-link:nth-child(2) {
-      height: calc((1000px - 32px) / 4);
+      height: calc((1000px - var(--container-gap)) / 4);
     }
     .container-1 > .project-link:nth-child(3) {
-      height: calc((1000px - 32px) / 4);
+      height: calc((1000px - var(--container-gap)) / 4);
     }
     .container-1 > .project-link:nth-child(4) {
-      height: calc((1000px - 32px) / 4 * 2);
+      height: calc((1000px - var(--container-gap)) / 4 * 2);
     }
     .container-2 > .project-link:nth-child(1) {
-      height: calc((1000px - 32px) / 4);
+      height: calc((1000px - var(--container-gap)) / 4);
     }
     .container-2 > .project-link:nth-child(2) {
-      height: calc((1000px - 32px) / 4 * 2);
+      height: calc((1000px - var(--container-gap)) / 4 * 2);
     }
     .container-2 > .project-link:nth-child(3) {
-      height: calc((1000px - 32px) / 4 * 2);
+      height: calc((1000px - var(--container-gap)) / 4 * 2);
     }
     .container-2 > .project-link:nth-child(4) {
-      height: calc((1000px - 32px) / 4);
+      height: calc((1000px - var(--container-gap)) / 4);
     }
     .container .project-image {
       background-repeat: no-repeat;
@@ -135,6 +146,7 @@ export class Gallery extends LitElement {
       --md-elevation-level: 0;
       transition-duration: 250ms;
       transition-timing-function: ease-in-out;
+      margin: var(--container-gap);
     }
     .container > a:hover {
       --md-elevation-level: 2;
@@ -142,9 +154,10 @@ export class Gallery extends LitElement {
     .project-link {
       padding: 0.5rem;
       border-radius: 0.5rem;
-      border: thin solid var(--md-sys-color-surface-dim);
+      border: thin solid var(--md-sys-color-on-primary);
       position: relative;
-      width: calc(50% - 32px);
+      width: 100%;
+      display: inline-block;
     }
   `;
 }
